@@ -1,21 +1,22 @@
 module.exports = function (api) {
   api.cache(true);
   return {
-    presets: ['babel-preset-expo'],
+    presets: ["babel-preset-expo"],
     plugins: [
+      "react-native-reanimated/plugin",
       [
-        'module-resolver',
+        "module-resolver",
         {
-          root: ['./src'],
+          root: ["./src"],
           alias: {
-            Config: './src/Config',
-            Constants: './src/Constants',
-            Themes: './src/Themes',
-            Assets: './assets',
-            Navigation: './src/Navigation',
-            Components: './src/Components',
-            Screens: './src/Screens',
-            Mock: './src/Mock',
+            Config: "./src/Config",
+            Constants: "./src/Constants",
+            Themes: "./src/Themes",
+            Assets: "./assets",
+            Navigation: "./src/Navigation",
+            Components: "./src/Components",
+            Screens: "./src/Screens",
+            Mock: "./src/Mock",
           },
         },
       ],

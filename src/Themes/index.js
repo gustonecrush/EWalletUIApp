@@ -1,11 +1,11 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, Appearance } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
-import {
-    Appearance,
-    AppearanceProvider,
-    useColorScheme,
-} from 'react-native-appearance';
+// import {
+//     // Appearance,
+//     AppearanceProvider,
+//     useColorScheme,
+// } from 'react-native';
 
 import lightTheme from './Light';
 import darkTheme from './Dark';
@@ -51,9 +51,9 @@ const ManageThemeProvider = ({ children }) => {
 };
 
 const ThemeManager = ({ children }) => (
-    <AppearanceProvider>
+    // <AppearanceProvider>
         <ManageThemeProvider>{children}</ManageThemeProvider>
-    </AppearanceProvider>
+    // </AppearanceProvider>
 );
 
 export { useThemeContext, lightTheme, darkTheme };
